@@ -7,14 +7,31 @@
     font-size: 62,7%;
     font-weight: 100;
     text-decoration: none;
+    scroll-behavior: smooth;
 
 }
 body {
     background-color: black;
+    /* overflow-x: hidden; */
 }
 
 /* --------------------NAV------------------ */
-nav {
+.divsecond {
+
+    display: flex;
+    flex-direction: column;
+    
+    position: fixed;
+    left: 2rem;
+    top: 40%;
+    gap: 4rem;
+    z-index: 4;
+
+    transform: translateX(-200%);
+}
+
+
+nav{
     display: flex;
     flex-direction: column;
 
@@ -25,11 +42,13 @@ nav {
 
 }
 
-nav a:hover {
+nav a:hover,
+.divsecond a:hover{
     color: #ff7b00;
     font-weight: 700;
 }
-nav a::after {
+nav a::after,
+.divsecond a::after {
     content: '';
     width: 100%;
     height: 2px;
@@ -37,13 +56,6 @@ nav a::after {
     position: relative;
     top: 4;
 }
-
-
-
-
-
-
-
 
 .content h1 {
     font-size: 10.7rem;
@@ -56,9 +68,104 @@ nav a::after {
 .lua {
     width: 428px;
     height: 428px;
+    
+    
+    background: linear-gradient(180deg, #ff7b00 0%, rgba(174, 0, 255, 0.11) 100%);
+    border-radius: 50%;
+}
+.lua1 {
+    width: 48px;
+    height: 48px;
     left: 746px;
     top: 326px;
     
     background: linear-gradient(180deg, #ff7b00 0%, rgba(174, 0, 255, 0.11) 100%);
     border-radius: 50%;
+}
+.lua2 {
+    width: 22px;
+    height: 22px;
+    left: 746px;
+    top: 326px;
+    
+    background: linear-gradient(180deg, #ff7b00 0%, rgba(174, 0, 255, 0.11) 100%);
+    border-radius: 50%;
+}
+.lua3 {
+    width: 50px;
+    height: 50px;
+    left: 746px;
+    top: 326px;
+    
+    background: linear-gradient(180deg, #ff7b00 0%, rgba(174, 0, 255, 0.11) 100%);
+    border-radius: 50%;
+}
+.lua4 {
+    width: 29px;
+    height: 29px;
+    left: 746px;
+    top: 326px;
+    
+    background: linear-gradient(180deg, #ff7b00 0%, rgba(174, 0, 255, 0.11) 100%);
+    border-radius: 50%;
+}
+
+/* --------------------CONTENT------------------ */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    top: 16rem;
+    right: 30%;
+    margin-inline: auto;
+}
+
+
+
+
+
+
+
+
+/* --------------------BALLS------------------ */
+.balls {
+    position: relative;
+    left: 30rem;
+    top: 2rem;
+    width: 50%;
+
+}
+.eclipse {
+    position: absolute;
+    top: -40%;
+    left: 13%;
+}
+.lua {
+    position: relative;
+    top: -60px;
+    left: 21%;
+
+}
+.lua1 {
+    position: absolute;
+    top: -300px;
+    left: 50%;
+}
+.lua2 {
+    position: absolute;
+    top: -200px;
+    left: 20%;
+}
+.lua3 {
+    position: absolute;
+    bottom: 90px;
+    left: 10%;
+}
+.lua4 {
+    position: absolute;
+    bottom: 20px;
+    left: 56%;
+
 }
