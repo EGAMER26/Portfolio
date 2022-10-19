@@ -22,12 +22,13 @@ body {
     flex-direction: column;
     
     position: fixed;
-    left: 2rem;
-    top: 40%;
+    left: 17rem;
+    top: 50%;
     gap: 4rem;
     z-index: 4;
 
-    transform: translateX(-200%);
+    opacity: 0;
+
 }
 
 
