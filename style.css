@@ -170,3 +170,60 @@ nav a::after,
     left: 56%;
 
 }
+/* --------------------PROJETOS------------------ */
+
+/* ---------legalite---------- */
+.legalite {
+    height: 40%;
+    width: 20%;
+    border-radius: 100%;
+    background-color:#ff7b00;
+    position: absolute;
+    left: 30%;
+    top: 40%;
+    transition: 100ms;
+    transform: translateY(-811px);
+}
+
+.legalitehover {
+    height: 80%;
+    width: 50%;
+    border-radius: 10%;
+    background: linear-gradient(180deg, #ff7b00 0%, rgba(174, 0, 255, 0.11) 100%);
+    transition: 500ms;
+}
+
+body .legaliteclick {
+    height: 100%;
+    width: 100%;
+    background-color: bisque;
+    top: 0;
+    left: 0;
+}
+/* ---------DoctorCare---------- */
+.doctor {
+    height: 30rem;
+    width: 30rem;
+    border-radius: 100%;
+    background-color:#f0c7a1;
+    position: absolute;
+    transition: 300ms;
+    transform: translateX(-511px);
+}
+
+.doctorhover {
+    height: 80%;
+    width: 50%;
+    border-radius: 10%;
+    background: linear-gradient(180deg, #ff7b00 0%, rgba(174, 0, 255, 0.11) 100%);
+    transition: 500ms;
+}
+
+body .doctorclick {
+    height: 100%;
+    width: 100%;
+    border-radius: 2px;
+    background-color: bisque;
+    top: -2000;
+    right: -100;
+}
