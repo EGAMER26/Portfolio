@@ -14,7 +14,7 @@ function projetos() {
     
     gsap.to(".eclipse", {x:-970, duration:3, rotate:50, ease: "back"});
     
-    gsap.to(".content", {opacity:0,x:-1000 , duration:2});
+    gsap.to(".content", {opacity:0,x:-1000 , ease: "slow" ,duration:1});
     
     gsap.to(".divsecond", {opacity:1, duration:3, ease: "back", });
     gsap.to("nav", {x:200, y:60, duration:3, ease: "back"});
@@ -34,7 +34,7 @@ function home() {
     
     gsap.to(".eclipse", {x:0, duration:3, rotate:50, ease: "back"});
     
-    gsap.fromTo(".content", {opacity:0, x:-1000}, {opacity:1, x:0, duration:3,force3d:true});
+    gsap.fromTo(".content", {opacity:0, x:-1000}, {opacity:1, x:0, duration:2 ,ease: "back",force3d:true});
     
     gsap.to(".divsecond", {opacity:0, duration:1, ease: "back", });
     gsap.to("nav", {x:0, y:0, duration:3, ease: "back"});
@@ -63,7 +63,7 @@ var iiiframeclick = document.querySelector('.projetos iframe')
 
 
 function myProjectson() {
-    gsap.to(".iphone5", {x:1402, y:-1050, duration:2, ease: "back"})
+    gsap.to(".iphone5", {x:1402, y:-1050, duration:3, ease: "elastic.out(1,1, 0.6)"})
  }
  function myProjectsout() {
      gsap.to(".iphone5", {y:700, duration:3, ease:"back"})
