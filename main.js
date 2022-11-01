@@ -29,7 +29,7 @@ function home() {
     gsap.to(".lua", {x:0, duration:2, rotate:280, ease: "back"});
     gsap.to(".lua1", {x:0, duration:4, rotate:50, ease: "back"});
     gsap.to(".lua2", {x:0, y:-50, duration:3, rotate:50, ease: "back"});
-    gsap.to(".lua3", {x:0, y:200, duration:3, rotate:50, ease: "back"});
+    gsap.to(".lua3", {x:0, y:100, duration:3, rotate:50, ease: "back"});
     gsap.to(".lua4", {x:0, duration:3, rotate:50, ease: "back"});
     
     gsap.to(".eclipse", {x:0, duration:3, rotate:50, ease: "back"});
@@ -63,7 +63,7 @@ var iiiframeclick = document.querySelector('.projetos iframe')
 
 
 function myProjectson() {
-    gsap.to(".iphone5", {x:1402, y:-650, duration:2, ease: "back"})
+    gsap.to(".iphone5", {x:1402, y:-1050, duration:2, ease: "back"})
  }
  function myProjectsout() {
      gsap.to(".iphone5", {y:700, duration:3, ease:"back"})

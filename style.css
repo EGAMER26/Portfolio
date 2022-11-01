@@ -18,6 +18,8 @@
 } */
 body {
     background-color: black;
+    overflow-y: hidden;
+    overflow-x: hidden;
     /* overflow-x: hidden; */
 }
 
@@ -146,7 +148,7 @@ nav a::after,
 }
 .eclipse {
     position: absolute;
-    top: -40%;
+    top: -55%;
     left: 13%;
 }
 .lua {
@@ -233,10 +235,13 @@ body .iframeclick {
 }
 /* ---------IPHONELEGALITE---------- */
 .iphone5 {
-    transform: translateY(702px);
+    
     transform: translateX(1402px);
-
+    position: relative;
+    top: 400px;
+    
 }
+
 
 .iphone {
     display: inline-block;
