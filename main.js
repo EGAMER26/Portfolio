@@ -1,11 +1,7 @@
 
 
 
-function work() {
-projetos();
-myProjectson()
 
-}
 
 function projetos() {
 
@@ -54,33 +50,42 @@ function waves() {
     
     gsap.to(".eclipse", {x:0, duration:3, rotate:50, ease: "back"});
 }
+function work() {
+    projetos();
+    myProjectson()
+    
+    }
 
- function myProjectson() {
-   gsap.to(".legalite", {x:0, y:0, duration:1, ease:"power1", yoyo: true})
+
+// ----------------------------IFRAME------------------------------------
+var iframeclick = document.querySelector('.projetos .iframe')
+var iiiframeclick = document.querySelector('.projetos iframe')
+
+
+function myProjectson() {
+    gsap.to(".iphone5", {x:1402, y:-650, duration:2, ease: "back"})
+ }
+ function myProjectsout() {
+     gsap.to(".iphone5", {y:700, duration:3, ease:"back"})
+ 
+ }
+function iiframeclick() {
+    if (iiiframeclick.classList.contains('iframeclick')) { 
+    iiiframeclick.classList.remove('iframeclick')}
+    else {
+        iiiframeclick.classList.add('iframeclick')
+    }
 }
-function myProjectsout() {
-    gsap.to(".legalite", {x:800, y:700})
-
+function iiframehover() {
+    if (iframeclick.classList.contains('iframehover')) { 
+    iframeclick.classList.remove('iframehover')}
+    else {
+        iframeclick.classList.add('iframehover')
+    }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//----------------------------------DOCTOR---------------------------------
 var doctorrclick = document.querySelector('.projetos .doctor')
-
 
 function doctorclick() {
     if (doctorrclick.classList.contains('doctorclick')) { 
@@ -92,20 +97,4 @@ function doctorclick() {
 function doctorhover() {
     gsap.to(".doctor", {x:-500,y:200 , duration:1, ease: "power1", yoyo:true})
 }
-var llegaliteclick = document.querySelector('.projetos .legalite')
 
-
-function legaliteclick() {
-    if (llegaliteclick.classList.contains('legaliteclick')) { 
-    llegaliteclick.classList.remove('legaliteclick')}
-    else {
-        llegaliteclick.classList.add('legaliteclick')
-    }
-}
-function legalitehover() {
-    if (llegaliteclick.classList.contains('legalitehover')) { 
-    llegaliteclick.classList.remove('legalitehover')}
-    else {
-        llegaliteclick.classList.add('legalitehover')
-    }
-}
