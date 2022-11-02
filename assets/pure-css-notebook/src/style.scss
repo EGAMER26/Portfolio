@@ -1,0 +1,68 @@
+@import "compass/css3";
+
+html {
+  position: relative;
+  z-index: 1;
+  background: #161518;
+}
+
+.notebook {
+  //The size of the entire computer depends on this font size
+  font-size: 4px;
+
+  position: relative;
+  width: 108em;
+  margin: 6em auto;
+}
+
+.display {
+  position: relative;
+  width: 80em;
+  height: 50em;
+  margin: 0 auto;
+  background: #796cce;
+  border: 4em solid #363636;
+  @include border-top-left-radius(3em);
+  @include border-top-right-radius(3em);
+  &:before {
+    content: '';
+    position: absolute;
+    top: -2.5em;
+    left: 50%;
+    margin-left: -0.5em;
+    width: 1em;
+    height: 1em;
+    background: #252525;
+    @include border-radius(1em);
+  }
+}
+
+.bottom {
+  position: relative;
+  width: 108em;
+  height: 2em;
+  background: #cccccc;
+  margin: 0 auto;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -6em;
+    width: 12em;
+    height: 1em;
+    background: #8e8e8e;
+    @include border-bottom-left-radius(1em);
+    @include border-bottom-right-radius(1em);
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -1em;
+    left: 0;
+    right: 0;
+    border-top: 1em solid #959595;
+    border-left: 4em solid transparent;
+    border-right: 4em solid transparent;
+  }
+}

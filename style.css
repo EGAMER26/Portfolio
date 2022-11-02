@@ -16,11 +16,33 @@
     height: 100%;
 
 } */
+html *,
+html *::before,
+html *::after {
+
+    box-sizing: inherit;
+
+}
+html {
+
+  box-sizing: border-box;
+  --bgColorMenu : #1d1d27;
+  --duration: .7s;    
+
+}
+.bodyback {
+  background-color: black !important;
+
+
+}
 body {
     background-color: black;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    /* overflow-x: hidden; */
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color var(--duration);
+
+    overflow-y: hidden; 
+    overflow-x: hidden; 
+    /* overflow-x: hidden;  */
 }
 
 /* --------------------NAV------------------ */
@@ -233,12 +255,104 @@ body .iframeclick {
     top: 0;
     left: 0;
 }
+/* ---------NOTEBOOK---------- */
+html {
+  position: relative;
+  z-index: 1;
+  background: #161518;
+}
+
+.notebook {
+  font-size: 14px;
+  position: absolute;
+  top: 1250px;
+  width: 108em;
+  margin: 6em auto;
+  transform: translateX(380px);
+  z-index: 2;
+
+}
+
+.displayy {
+  position: relative;
+  width: 80em;
+  height: 50em;
+  margin: 0 auto;
+  background: black;
+  border: 4em solid #363636;
+  -moz-border-radius-topleft: 3em;
+  -webkit-border-top-left-radius: 3em;
+  border-top-left-radius: 3em;
+  -moz-border-radius-topright: 3em;
+  -webkit-border-top-right-radius: 3em;
+  border-top-right-radius: 3em;
+}
+.displayy:before {
+  content: '';
+  position: absolute;
+  top: -2.5em;
+  left: 50%;
+  margin-left: -0.5em;
+  width: 1em;
+  height: 1em;
+  background: #252525;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+}
+
+.bottom {
+  position: relative;
+  width: 108em;
+  height: 2em;
+  background: #cccccc;
+  margin: 0 auto;
+}
+.bottom:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -6em;
+  width: 12em;
+  height: 1em;
+  background: #8e8e8e;
+  -moz-border-radius-bottomleft: 1em;
+  -webkit-border-bottom-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+  -moz-border-radius-bottomright: 1em;
+  -webkit-border-bottom-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+.bottom:after {
+  content: '';
+  position: absolute;
+  bottom: -1em;
+  left: 0;
+  right: 0;
+  border-top: 1em solid #959595;
+  border-left: 4em solid transparent;
+  border-right: 4em solid transparent;
+}
+.noteContent {
+  position: relative;
+  top: -18.4rem;
+  right: 31.5rem;
+  height: 1174px;
+  width: 2016px;
+}
+
+
+
+
+
+
 /* ---------IPHONELEGALITE---------- */
 .iphone5 {
     
     transform: translateX(1402px);
     position: relative;
-    top: 400px;
+    top: -2000px;
     
 }
 
@@ -547,8 +661,8 @@ body .iframeclick {
 
 
 
-/* ---------DoctorCare---------- */
-.doctor {
+  /* ---------DoctorCare---------- */
+  .doctor {
     height: 30rem;
     width: 30rem;
     border-radius: 100%;
@@ -556,25 +670,155 @@ body .iframeclick {
     position: absolute;
     transition: 300ms;
     transform: translateX(-511px);
-}
-
-.doctorhover {
+  }
+  
+  .doctorhover {
     height: 80%;
     width: 50%;
     border-radius: 10%;
     background: linear-gradient(180deg, #ff7b00 0%, rgba(174, 0, 255, 0.11) 100%);
     transition: 500ms;
-}
+  }
 
 body .doctorclick {
-    height: 100%;
-    width: 100%;
-    border-radius: 2px;
-    background-color: bisque;
-    top: -2000;
-    right: -100;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  background-color: bisque;
+  top: -2000;
+  right: -100;
 }
 
+/* ---------MENU---------- */
+.menu{
+
+  transition: 400ms;
+  margin: 0;
+  display: flex;
+  /* Works well with 100% width  */
+  width: 22.05em;
+  border-radius: 4rem;
+  font-size: 1.5em;
+  padding: 0 2.85em;
+  left: 15rem;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(92.95deg, rgba(255, 255, 255, 0.4) 0.82%, rgba(255, 255, 255, 0.7) 96.47%);
+backdrop-filter: blur(2px);
+ 
+
+}
+.allMenu {
+  transform: translateY(-860px);
+  z-index: 4;
+  position: relative;
+
+}
+
+.menu__item{
+  
+  all: unset;
+  flex-grow: 1;
+  z-index: 100;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  border-radius: 50%;
+  align-items: center;
+  will-change: transform;
+  justify-content: center;
+  padding: 0.55em 0 0.85em;
+  transition: transform var(--timeOut , var(--duration));
+  
+}
+
+.menu__item::before{
+  
+  content: "";
+  z-index: -1;
+  width: 4.2em;
+  height: 4.2em;
+  border-radius: 50%;
+  position: absolute;
+  transform: scale(0);
+  transition: background-color var(--duration), transform var(--duration);
+  
+}
+
+
+.menu__item.active {
+
+  transform: translate3d(0, -.8em , 0);
+
+}
+
+.menu__item.active::before{
+  
+  transform: scale(1);
+  background-color: var(--bgColorItem);
+
+}
+
+.icon{
+  
+  width: 2.6em;
+  height: 2.6em;
+  stroke: white;
+  fill: transparent;
+  stroke-width: 1pt;
+  stroke-miterlimit: 10;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 400;
+  
+}
+
+.menu__item.active .icon {
+
+  animation: strok 1.5s reverse;
+  
+}
+
+@keyframes strok {
+
+  100% {
+
+      stroke-dashoffset: 400;
+
+  }
+
+}
+
+.menu__border{
+
+  left: 0;
+  bottom: 95.8px;
+  width: 10.9em;
+  height: 2.4em;
+  position: absolute;
+  clip-path: url(#menu);
+  will-change: transform;
+  background: linear-gradient(92.95deg, rgba(255, 255, 255, 0.4) 0.82%, rgba(255, 255, 255, 0.7) 96.47%);
+backdrop-filter: blur(4px);
+  transition: transform var(--timeOut , var(--duration));
+  
+  
+}
+
+.svg-container {
+
+  width: 0;
+  height: 0;
+}
+
+
+@media screen and (max-width: 50em) {
+  .menu{
+      font-size: .8em;
+      transition: 400ms;
+  }
+}
 
 
 
