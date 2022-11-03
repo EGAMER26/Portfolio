@@ -1,0 +1,35 @@
+body {
+    background-color: black;
+}
+
+.landpageProjects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+.transback {
+  background: linear-gradient(92.95deg, rgba(255, 255, 255, 0.4) 0.82%, rgba(255, 255, 255, 0.7) 96.47%);
+  backdrop-filter: blur(2px);
+  width: 50rem;
+  height: 24rem;
+  border-radius: 2rem;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cardLegalite,
+.cardDoctorCare {
+}
+img {
+    border-radius: 40px;
+    width: 98%;
+}
+.cardLegalite img {
+    /* margin-left: 9px; */
+}

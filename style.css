@@ -350,7 +350,7 @@ html {
 /* ---------IPHONELEGALITE---------- */
 .iphone5 {
     
-    transform: translateX(1402px);
+    transform: translateX(902px);
     position: relative;
     top: -2000px;
     
@@ -689,6 +689,47 @@ body .doctorclick {
   right: -100;
 }
 
+/* ---------CARDS---------- */
+.landpageProjects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  
+  transform: translateX(120rem);
+
+}
+.transback {
+background: linear-gradient(92.95deg, rgba(255, 255, 255, 0.4) 0.82%, rgba(255, 255, 255, 0.7) 96.47%);
+backdrop-filter: blur(2px);
+width: 50rem;
+height: 24rem;
+border-radius: 2rem;
+display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.landpageProjects img:hover {
+  transform: scale(1.1);
+  /* width: 52rem;
+  height: 26rem; */
+  transition: 600ms linear;
+  z-index: 5;
+  /* position: absolute; */
+  transition-timing-function: ease;
+  opacity: 1;
+
+}
+img {
+  border-radius: 40px;
+  width: 98%;
+  opacity: .9;
+}
 /* ---------MENU---------- */
 .menu{
 
@@ -700,12 +741,13 @@ body .doctorclick {
   border-radius: 4rem;
   font-size: 1.5em;
   padding: 0 2.85em;
-  left: 15rem;
+  left: 12rem;
   position: absolute;
   align-items: center;
   justify-content: center;
   background: linear-gradient(92.95deg, rgba(255, 255, 255, 0.4) 0.82%, rgba(255, 255, 255, 0.7) 96.47%);
-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  transform: rotate(90deg);
  
 
 }
@@ -713,6 +755,8 @@ backdrop-filter: blur(2px);
   transform: translateY(-860px);
   z-index: 4;
   position: relative;
+  top: -20rem;
+
 
 }
 
@@ -730,6 +774,7 @@ backdrop-filter: blur(2px);
   justify-content: center;
   padding: 0.55em 0 0.85em;
   transition: transform var(--timeOut , var(--duration));
+ transform: rotate(270deg);  /* Equal to rotateZ(45deg) */
   
 }
 
@@ -751,12 +796,14 @@ backdrop-filter: blur(2px);
 
   transform: translate3d(0, -.8em , 0);
 
+
 }
 
 .menu__item.active::before{
   
   transform: scale(1);
   background-color: var(--bgColorItem);
+
 
 }
 
@@ -766,7 +813,7 @@ backdrop-filter: blur(2px);
   height: 2.6em;
   stroke: white;
   fill: transparent;
-  stroke-width: 1pt;
+  stroke-width: .1pt;
   stroke-miterlimit: 10;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -776,7 +823,7 @@ backdrop-filter: blur(2px);
 
 .menu__item.active .icon {
 
-  animation: strok 1.5s reverse;
+  animation: strok 2.5s reverse;
   
 }
 
@@ -790,7 +837,7 @@ backdrop-filter: blur(2px);
 
 }
 
-.menu__border{
+menu__border{
 
   left: 0;
   bottom: 95.8px;
@@ -800,7 +847,7 @@ backdrop-filter: blur(2px);
   clip-path: url(#menu);
   will-change: transform;
   background: linear-gradient(92.95deg, rgba(255, 255, 255, 0.4) 0.82%, rgba(255, 255, 255, 0.7) 96.47%);
-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   transition: transform var(--timeOut , var(--duration));
   
   

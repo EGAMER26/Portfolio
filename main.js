@@ -18,8 +18,11 @@ function projetos() {
     
     gsap.to(".divsecond", {opacity:1, duration:3, ease: "back", });
     gsap.to("nav", {x:200, y:60, duration:3, ease: "back"});
+    gsap.to(".landpageProjects", {x:700, y:-690, duration:4, ease: "elastic(1, 1)"});
+    gsap.to(".cardLegalite", {y:0, duration:2,opacity:1, ease:"back"})
+    gsap.to(".cardDoctorCare", {y:0, duration:2, ease:"back"})
     
-    gsap.to(".allMenu", {y:-660, duration:2, ease: "back"});
+    // gsap.to(".allMenu", {y:-60, duration:4, ease: "elastic"});
 }
 function homee() {
     myProjectsout();
@@ -45,6 +48,12 @@ function home() {
 
     gsap.to(".allMenu", {y:-860, duration:1, ease: "back"});
     gsap.to(".notebook", {y:1000, duration:3, ease: "back"});
+
+    gsap.to(".landpageProjects", {x:1800, y:690, duration:4, ease: "back"});
+
+    gsap.to(".cardLegalite", {duration:.1, opacity:0 })
+
+
     
 }
 
@@ -72,7 +81,6 @@ function backbody(item, index) {
     //     activeItem = item;
     //     offsetMenuBorder(activeItem, menuBorder);
         
-        
     }
     function outbody(item, index) {
         if(backblack.classList.contains('bodyback')) {
@@ -90,7 +98,7 @@ function waves() {
 }
 function work() {
     projetos();
-    pcButton();
+    // pcButton();
     outbody()
     
     }
@@ -214,3 +222,22 @@ function iphoneButton() {
 
 }
 
+// ----------------------------BUTTONS------------------------------------
+
+function buttonLegalite() {
+ gsap.to(".allMenu", {y:-60, duration:4, ease: "elastic"});
+ gsap.to(".notebook", {y:-1250, duration:2, ease:"back"});
+ gsap.to(".iphone5", {y:-100, duration:2, ease:"back"})
+ gsap.to(".cardLegalite", {y:-500, duration:2, ease:"back"})
+ gsap.to(".cardDoctorCare", {y:500, duration:2, ease:"back"})
+
+}
+function buttonDoctor() {
+    gsap.to(".allMenu", {y:-60, duration:4, ease: "elastic"});
+ gsap.to(".notebook", {y:-1250, duration:2, ease:"back"});
+ gsap.to(".iphone5", {y:-100, duration:2, ease:"back"})
+ gsap.to(".cardLegalite", {y:-500, duration:2, ease:"back"})
+ gsap.to(".cardDoctorCare", {y:500, duration:2, ease:"back"})
+
+
+}
