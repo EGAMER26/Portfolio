@@ -27,7 +27,8 @@ function projetos() {
 function homee() {
     myProjectsout();
     home();
-    backbody()
+    backbody();
+    pclighton();
 
 }
 
@@ -97,6 +98,7 @@ function waves() {
     gsap.to(".eclipse", {x:0, duration:3, rotate:50, ease: "back"});
 }
 function work() {
+    
     projetos();
     // pcButton();
     outbody()
@@ -239,5 +241,44 @@ function buttonDoctor() {
  gsap.to(".cardLegalite", {y:-500, duration:2, ease:"back"})
  gsap.to(".cardDoctorCare", {y:500, duration:2, ease:"back"})
 
+
+}
+let pclight = document.querySelector('#one')
+let cellight = document.querySelector('#two')
+
+function pclighton() {
+    if(cellight.classList.contains('active')) {
+        pclight.classList.remove('active')
+    } else {
+        pclight.classList.add('active')
+    }
+
+}
+function cellPhone() {
+    buttonLegalite();
+    cellphoneOn();
+    pclighton()
+}
+
+
+function cellighton() {
+    if(cellight.classList.contains('active')) {
+        cellight.classList.remove('active')
+    }
+
+}
+// function pclighton() {
+//     if(pclight.classList.contains('active')) {
+//         pclight.classList.remove('active')
+//     } else {
+//         pclight.classList.add('active')
+//     }
+
+// }
+function cellphoneOn() {
+    if(cellight.classList.contains('active')) {
+        gsap.to(".notebook", {y:500, duration:2, ease:"back"});
+        gsap.to(".iphone5", {y:1320, duration:2, ease:"back"})
+    }
 
 }
