@@ -7,7 +7,7 @@ function projetos() {
 
     
     gsap.to(".lua", {x:-900, duration:2, rotate:380, ease: "back"});
-    gsap.to(".lua1", {x:-900, duration:4, rotate:250, ease: "back"});
+    gsap.to(".lua1", {x:-900, duration:4, rotate:360, ease: "back"});
     gsap.to(".lua2", {x:-900, y:-50, duration:3, rotate:150, ease: "back"});
     gsap.to(".lua3", {x:-900, y:200, duration:3, rotate:350, ease: "back"});
     gsap.to(".lua4", {x:-900, duration:3, rotate:450, ease: "back"});
@@ -15,6 +15,7 @@ function projetos() {
     gsap.to(".eclipse", {x:-970, duration:3, rotate:50, ease: "back"});
     
     gsap.to(".content", {opacity:0,x:-1000 , ease: "slow" ,duration:1});
+    
     
     gsap.to(".divsecond", {opacity:1, duration:3, ease: "back", });
     gsap.to("nav", {x:200, y:60, duration:3, ease: "back"});
@@ -46,6 +47,9 @@ function home() {
     
     gsap.to(".divsecond", {opacity:0, duration:1, ease: "back"});
     gsap.to("nav", {x:0, y:0, duration:3, ease: "back"});
+
+    gsap.to(".lua1 a", {opacity:0, ease: "slow" ,duration:1});
+
 
     gsap.to(".allMenu", {y:-860, duration:1, ease: "back"});
     gsap.to(".notebook", {y:1000, duration:3, ease: "back"});
@@ -113,6 +117,7 @@ var iiiframeclick = document.querySelector('.projetos iframe')
 
 function myProjectson() {
     gsap.to(".iphone5", {x:1402, y:-1050, duration:3, ease: "elastic.out(1,1, 0.6)"})
+
  }
  function myProjectsout() {
      gsap.to(".iphone5", {y:-2000, duration:3, ease:"back"})
@@ -232,14 +237,26 @@ function buttonLegalite() {
  gsap.to(".iphone5", {y:-100, duration:2, ease:"back"})
  gsap.to(".cardLegalite", {y:-500, duration:2, ease:"back"})
  gsap.to(".cardDoctorCare", {y:500, duration:2, ease:"back"})
+ gsap.to(".lua1", {opacity:1, ease: "slow" ,duration:1});
+
 
 }
 function buttonDoctor() {
+    doctor();
+    cellphoneOn()
+
+}
+
+
+function doctor() {
     gsap.to(".allMenu", {y:-60, duration:4, ease: "elastic"});
  gsap.to(".notebook", {y:-1250, duration:2, ease:"back"});
  gsap.to(".iphone5", {y:-100, duration:2, ease:"back"})
  gsap.to(".cardLegalite", {y:-500, duration:2, ease:"back"})
  gsap.to(".cardDoctorCare", {y:500, duration:2, ease:"back"})
+
+ gsap.to(".lua1", {opacity:1, ease: "slow" ,duration:1});
+
 
 
 }
@@ -280,5 +297,11 @@ function cellphoneOn() {
         gsap.to(".notebook", {y:500, duration:2, ease:"back"});
         gsap.to(".iphone5", {y:1320, duration:2, ease:"back"})
     }
+
+}
+
+function backbutton() {
+    work()
+
 
 }
