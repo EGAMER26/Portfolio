@@ -115,11 +115,18 @@ nav a::after,
     justify-content: center;
     align-items: center;
     display: flex; 
+    position: relative;
+    z-index: 5;
   }
-  /* .lua1 img {
+  .lua1 a {
+    display: none;
     cursor: pointer;
-    opacity: 0;
-} */
+    height: 1.4rem;
+    width: 1.4rem;
+}
+body .abuttonOn {
+  display: block;
+}
 .lua2 {
     width: 22px;
     height: 22px;

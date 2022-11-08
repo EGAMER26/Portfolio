@@ -29,7 +29,7 @@ function homee() {
     myProjectsout();
     home();
     backbody();
-    pclighton();
+    pclighton()
 
 }
 
@@ -220,6 +220,12 @@ function pcButton() {
     // gsap.to(".lua", {x:-900, duration:2, rotate:380, ease: "back"});
 
 }
+function pcOut() {
+    gsap.to(".notebook", {y:1000, duration:3, ease: "back"});
+    gsap.to(".allMenu", {y:-860, duration:2, ease: "back"});
+
+}
+
 function iphoneButton() {
     gsap.to(".notebook", {y:500, duration:2, ease:"back"});
     gsap.to(".iphone5", {y:1320, duration:2, ease:"back"})
@@ -239,16 +245,22 @@ function buttonLegalite() {
  gsap.to(".cardDoctorCare", {y:500, duration:2, ease:"back"})
  gsap.to(".lua1", {opacity:1, ease: "slow" ,duration:1});
 
+ buttonbackOn()
+
 
 }
 function buttonDoctor() {
     doctor();
-    cellphoneOn()
+    cellphoneOn();
+    buttonbackOn()
 
 }
 
 
 function doctor() {
+    buttonbackOn();
+
+
     gsap.to(".allMenu", {y:-60, duration:4, ease: "elastic"});
  gsap.to(".notebook", {y:-1250, duration:2, ease:"back"});
  gsap.to(".iphone5", {y:-100, duration:2, ease:"back"})
@@ -301,7 +313,20 @@ function cellphoneOn() {
 }
 
 function backbutton() {
-    work()
+    work();
+    myProjectsout();
+    pcOut()
 
+
+}
+let backon = document.querySelector('.lua1 a')
+
+
+function buttonbackOn() {
+    if (backon.classList.contains('abuttonOn')) {
+        backon.classList.remove('abuttonOn')
+    } else {
+        backblack.classList.add('abuttonOn')
+    }
 
 }
